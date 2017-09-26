@@ -19,7 +19,7 @@ A attempt to build a simple breadcrumb/menu system for Django-CMS
 ::
    
  pip install ipython
-  pip install -e git+https://github.com/fp4code/dju-menuzen.git#egg=dju_menuzen
+ pip install -e git+https://github.com/fp4code/dju-menuzen.git#egg=dju_menuzen
  cd mysite/templates
  ln -s ../../../env/src/dju-menuzen/demos/page-menuzen-b3.html .
  ln -s ../../../env/src/dju-menuzen/demos/menu-b3.html 
@@ -59,3 +59,8 @@ A attempt to build a simple breadcrumb/menu system for Django-CMS
  b2b = page(b2, "b")
  b2b1 = page(b2b, "1")
  b2b2 = page(b2b, "2")
+
+::
+
+ ./manage.py runserver 8005 # http://localhost:8005/
+
