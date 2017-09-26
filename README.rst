@@ -24,7 +24,8 @@ A attempt to build a simple breadcrumb/menu system for Django-CMS
  ln -s ../../../env/src/dju-menuzen/demos/page-menuzen-b3.html .
  ln -s ../../../env/src/dju-menuzen/demos/menu-b3.html 
  ln -s ../../../env/src/dju-menuzen/demos/menuzen-b3.html 
-
+ cd ../..
+ 
 ::
 
  ./manage.py shell
