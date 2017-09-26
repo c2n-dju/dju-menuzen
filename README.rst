@@ -12,7 +12,7 @@ A attempt to build a simple breadcrumb/menu system for Django-CMS
 :: 
  
  cat >> mysite/settings.py << EOF
- INSTALLED_APPS += ('dju-menuzen',)
+ INSTALLED_APPS += ('dju_menuzen',)
  CMS_TEMPLATES += (('page-menuzen-b3', 'Menuzen B3'),)
  EOF
 
