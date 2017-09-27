@@ -9,7 +9,7 @@ REQUIREMENTS = [
 ]
 
 CLASSIFIERS = [
-    'Development Status :: 4 - ',
+    'Development Status :: 2 - Pre-Alpha',
     'Environment :: Web Environment',
     'Framework :: Django',
     'Intended Audience :: Developers',
