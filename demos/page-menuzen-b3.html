@@ -1,4 +1,4 @@
-<!DOCTYPE html>{% load cms_tags static sekizai_tags %}
+<!DOCTYPE html>{% load cms_tags menu_tags static sekizai_tags %}
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -246,12 +246,49 @@ div.dropdown.open > .btn {
   padding-bottom: 10px;
 }
 
+.mysite-header {
+  margin-top: 10px;
+  margin-bottom: 1px;
+  margin-left: -1px;    
+  background-image: linear-gradient(90deg, #00294b, #ffffff);     
+  color: #ffffff;
+}
+
+.mysite-bloc {
+  color: #ffffff;
+}
+
+.mysite-bloc-1 {
+  float:left;      
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.mysite-header-white {
+  margin-top: 10px;
+  margin-bottom: 1px;
+  margin-left: -1px;    
+  color: #fff;
+}
+
+
   </style>
 </head>
 <body>
 <div class="bread-100">
   <div class="width-950 bread-0">
-    {% load menu_tags %}
+    <div class="container-fluid">
+      <div class="row">
+	<div class="col-xs-8 mysite-header">
+	  <a class="mysite-bloc" href="/" title="My Site">
+	    <span class="mysite-bloc-1">My Site</span>
+	  </a>
+	</div>
+	<div class="col-xs-4 mysite-header-white">
+	</div>
+      </div>
+    </div>
     <div class="dessus">
       {# <nav class="navbar navbar-default"> #}
 	<nav>
@@ -265,8 +302,14 @@ div.dropdown.open > .btn {
 	</nav>
     </div>
     {% load dju_menuzen_tags %}
-    <div>
-      {% show_menuzen 0 "menuzen-b3.html" %}
+    <div class="dessus">
+      <div class="container-fluid">
+	<div class="row">
+	  <div class="col-xs-7 col-sm-8 col-md-10" style="padding-left: 0px;">
+	    {% show_menuzen 0 "menuzen-b3.html" %}
+	  </div>
+	</div>
+      </div>
     </div>
 
     <div class="dessus">

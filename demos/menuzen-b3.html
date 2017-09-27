@@ -17,7 +17,7 @@
       </button>
       {% if ance.attr.childs|length > 0 %}
       <ul class="dropdown-menu">
-	<li><a class="{{ ance.attr.color }}" href="{{ ance.get_absolute_url }}">{{ ance.get_menu_title }} : présentation</a></li>
+	<li><a class="{{ ance.attr.color }}" href="{{ ance.get_absolute_url }}">{{ ance.get_menu_title }}: presentation</a></li>
 	<li class="divider"></li>
 	{% for ch in ance.attr.childs %}
 	<li><a class="{{ ch.attr.color }}" href="{{ ch.get_absolute_url }}">{{ ch.get_menu_title }}</a></li>
