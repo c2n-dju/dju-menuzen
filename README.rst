@@ -60,7 +60,10 @@ A attempt to build a simple breadcrumb/menu system for Django-CMS
  b2b1 = page(b2b, "1")
  b2b2 = page(b2b, "2")
 
+Lauch server
+ 
 ::
 
- ./manage.py runserver 8005 # http://localhost:8005/
+ ./manage.py runserver 8005
 
+and open http://localhost:8005/en/b/2/b/
