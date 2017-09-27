@@ -17,8 +17,10 @@ A attempt to build a simple breadcrumb/menu system for Django-CMS
 
  cd $D/mysite
  cat >> mysite/settings.py << EOF
- INSTALLED_APPS += ('dju_menuzen',)
+ ALLOWED_HOSTS += ['localhost',]
  CMS_TEMPLATES += (('page-menuzen-b3.html', 'Menuzen B3'),)
+ CMS_TEMPLATES += (('page-menuzen-f6_4.html', 'Menuzen F6.4'),)
+ INSTALLED_APPS += ('dju_menuzen',)
  EOF
 
 ::
