@@ -13,6 +13,11 @@ A attempt to build a simple breadcrumb/menu system for Django-CMS
  pip install djangocms-installer==0.9.7
  djangocms mysite
 
+::
+   
+ pip install ipython
+ pip install -e git+https://github.com/fp4code/dju-menuzen.git#egg=dju_menuzen
+
 :: 
 
  cd $D/mysite
@@ -24,13 +29,8 @@ A attempt to build a simple breadcrumb/menu system for Django-CMS
  EOF
 
 ::
-   
- pip install ipython
- pip install -e git+https://github.com/fp4code/dju-menuzen.git#egg=dju_menuzen
-
-::
   
- cd $D/mysite/templates
+ cd $D/mysite/mysite/templates
  ln -s ../../../env/src/dju-menuzen/demos/page-menuzen-b3.html .
  ln -s ../../../env/src/dju-menuzen/demos/menu-b3.html 
  ln -s ../../../env/src/dju-menuzen/demos/menuzen-b3.html 
