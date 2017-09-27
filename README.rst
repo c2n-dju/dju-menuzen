@@ -39,7 +39,7 @@ A attempt to build a simple breadcrumb/menu system for Django-CMS
 ::
 
  cd $D
- git clone https://github.com/fp4code/foundation-zurb-template.git
+ git clone https://github.com/zurb/foundation-zurb-template.git
  cd foundation-zurb-template
  npm install
  npm start
