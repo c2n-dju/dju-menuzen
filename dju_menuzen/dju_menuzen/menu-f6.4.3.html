@@ -1,0 +1,9 @@
+{% load i18n menu_tags cache %}
+
+<ul class="dropdown menu" data-dropdown-menu>
+{% for child in children %}
+    <li>
+      <a href="{{ child.get_absolute_url }}">{{ child.get_menu_title }}</a>
+    </li>
+{% endfor %}
+</ul>
