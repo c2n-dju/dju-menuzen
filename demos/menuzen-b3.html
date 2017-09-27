@@ -22,11 +22,6 @@
 	{% for ch in ance.attr.childs %}
 	<li><a class="{{ ch.attr.color }}" href="{{ ch.get_absolute_url }}">{{ ch.get_menu_title }}</a></li>
         {% endfor %}
-	{% comment %}
-	<li class="divider"></li>
-	<li><a href="http://www.lpn.cnrs.fr">Accueil site LPN</a></li>
-	<li><a href="http://www.onera.fr/">Accueil site ONERA</a></li>
-        {% endcomment %}
       </ul>
       {% endif %}
     </div>

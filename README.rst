@@ -39,12 +39,12 @@ A attempt to build a simple breadcrumb/menu system for Django-CMS
  def page(parent, title):
      template = 'page-menuzen-b3.html'
      user = User.objects.all()[0]
+     id = "id_home" if parent == None else None
      p = api.create_page(title, template, "en",
-                         created_by='python-api',
                          parent=parent,
                          in_navigation=True,
-                         published=True,
-                         position="last-child")
+			 reverse_id = id,
+                         published=True)
      api.publish_page(p, user , "en")
      return p
 
