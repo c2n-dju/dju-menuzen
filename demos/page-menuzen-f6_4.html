@@ -5,6 +5,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block head_title %}My Site &ndash; {% page_attribute page_title %}{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,400italic,600italic&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" crossorigin="anonymous" /--> <!-- integrity="sha256-itWEYdFWzZPBG78bJOOiQIn06QCgN/F0wMDcC4nOhxY=" -->
     <link rel="stylesheet" href="{% static 'assets/css/app.css' %}">
     <link rel="stylesheet" href="{% static 'foundation-icons/foundation-icons.css' %}">
   </head>
@@ -12,154 +14,14 @@
   
   <style>
 
-.myheader {
-  margin-top: 10px;
-  margin-bottom: 1px;
-  background-image: linear-gradient(to right, #00294b, #ffffff);
-}
-
-.btn {
-  border-radius: 0px;
-  font-size:100%;
-  margin-left: -2px;
-  margin-right: -2px;
-}
-
-.btn-default, .btn-default.active, .btn-default:active {
-  background: #00294b;
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  color: #fff;
-  text-shadow: none;
-  box-shadow: none;
-  border-width: 0;
-}    
-
-.dropdown-menu {
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 400;
-}
-
-.dropdown-menu>.active>a {
-  background: #32546f;
-}
-
-.bread-100 {
-  background: #00294b;
-  # opacity: 1.0;
-  color: #fff;    
-}
-
-.bread-80 {
-  background: #33536f;
-  # opacity: 0.8;
-  color: #fff;    
-}
-
-.bread-60 {
-  background: #667e93;
-  # opacity: 0.6;
-  color: #fff;    
-}
-
-.bread-40 {
-  background: #99a9b7;
-  # opacity: 0.4;
-  color: #fff;    
-}
-
-.bread-20 {
-  background: #ccd4db;
-  # opacity: 0.2;
-  color: #fff;    
-}
-
-.bread-0 {
-  background: #fff;
-  color: #000;    
-}
-
-.dropdown-menu>li>a.bread-20 {
-  color: #fff;    
-}
-      
-.dropdown-menu>li>a.bread-40 {
-  color: #fff;    
-}
-
-.dropdown-menu>li>a.bread-60 {
-  color: #fff;    
-}
-      
-.dropdown-menu>li>a.bread-80 {
-  color: #fff;    
-}
-
-.dropdown-menu>li>a.bread-100 {
-  color: #fff;    
-}
-
-.fixedbutton {
-  width: 24px !important;
-  padding: 6px 0px;
-  text-align: center;
-  margin-left: 0px;
-  margin-right: 0px;
-}
-
-.mybreadcrumb > li {
-  display: inline-block;
-}
-      
-.width-950 {
-  max-width:950px;
-}
-
-.bgr {
-  background-color: #ffdddd;
-}
-
-.open>.dropdown-toggle.btn-default {
-  color: unset; # BOF
-  background-color: unset; # BOF
-}
- 
-.panel-heading [data-toggle="collapse"]:after {
-				font-family: 'Glyphicons Halflings';
-				content: "\e072";
-				float: right;
-				color: #b0c5d8;
-				font-size: 18px;
-				line-height: 22px;
-}
-
-.mycaret {
-  color: #fff;
-  position: absolute;
-  right: 2px;
-  top: unset;
-  bottom: -1px;
-  font-size:71%;
-}
-
-.mycaret-first {
-  right: 0px;
-}
- 
 body {
   font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-  </style>
-    
-  <style>
 
-.glyphicon-mycaret:before {
-  content: "\e252";
-}
-
-.open > button > span.glyphicon-mycaret:before {
-  content: "\e253";
-  color: #f00;
+.width-950 {
+  margin-left: auto;
+  margin-right: auto;
+  max-width:950px;
 }
 
 .dessus {
@@ -200,53 +62,19 @@ body {
   z-index: 1000;
 }
 
-.mynav {
-  padding: 8px 15px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  list-style: none;
-  border-radius: 4px;
-  background-color: #ffffff;
-  padding-top: 3px;
-  padding-right: 4px;
-  padding-bottom: 4px;
-  padding-left: 4px;
-}
-
-.btn-default {
-  margin-top: 2px;
-}
-
-.width-950 {
-  margin-left: auto;
-  margin-right: auto;
-  max-width:950px;
-}
-
-div.dropdown.open > .btn {
-  color: rgba(255,255,255,0.5);
-}
-
-.mycaret {
-  color: #fff;
-  position: absolute;
-  right: 2px;
-  top: unset;
-  bottom: -1px;
-  font-size:71%;
-}
-
-.navbar-nav>li>a {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
 .mysite-header {
   margin-top: 10px;
   margin-bottom: 1px;
   margin-left: -1px;    
   background-image: linear-gradient(90deg, #00294b, #ffffff);     
   color: #ffffff;
+}
+
+.mysite-header-white {
+  margin-top: 10px;
+  margin-bottom: 1px;
+  margin-left: -1px;    
+  color: #fff;
 }
 
 .mysite-bloc {
@@ -260,33 +88,104 @@ div.dropdown.open > .btn {
   font-weight: 600;
 }
 
-.mysite-header-white {
-  margin-top: 10px;
-  margin-bottom: 1px;
-  margin-left: -1px;    
-  color: #fff;
+.bread-100 {
+  background: #00294b;
+  # opacity: 1.0;
+  color: #fff;    
 }
 
+.bread-80 {
+  background: #33536f;
+  # opacity: 0.8;
+  color: #fff;    
+}
+
+.bread-60 {
+  background: #667e93;
+  # opacity: 0.6;
+  color: #fff;    
+}
+
+.bread-40 {
+  background: #99a9b7;
+  # opacity: 0.4;
+  color: #fff;    
+}
+
+.bread-20 {
+  background: #ccd4db;
+  # opacity: 0.2;
+  color: #fff;    
+}
+
+.bread-0 {
+  background: #fff;
+  color: #000;    
+}
+
+.dropdown-menu {
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+.dropdown-menu>.active>a {
+  background: #32546f;
+}
+
+.dropdown-menu>li>a.bread-20 {
+  color: #fff;    
+}
+      
+.dropdown-menu>li>a.bread-40 {
+  color: #fff;    
+}
+
+.dropdown-menu>li>a.bread-60 {
+  color: #fff;    
+}
+      
+.dropdown-menu>li>a.bread-80 {
+  color: #fff;    
+}
+
+.dropdown-menu>li>a.bread-100 {
+  color: #fff;    
+}
+
+.mybreadcrumb > li {
+  display: inline-block;
+}
+
+.dropdown.menu > li.is-dropdown-submenu-parent > a {
+  padding-left: 0.8rem;
+  padding-right: 1.2rem;
+}
+
+.dropdown.menu > li.is-dropdown-submenu-parent > a::after {
+  border-color: #fff transparent transparent;
+  right: 0.2em;
+  margin-top: 0.5em;
+}
 
   </style>
 </head>
 <body>
 <div class="bread-100">
   <div class="width-950 bread-0">
-    <div class="grid-container">
+    <div class="grid-container" style="padding-left: 0; padding-right: 0;">
       <div class="grid-x grid-margin-x">
 	<div class="small-8 cell mysite-header">
 	  <a class="mysite-bloc" href="/" title="My Site">
-	    <span class="mysite-bloc-1">My Site</span>
+	    <span class="mysite-bloc-1" style="margin-left: 1rem;">My Site</span>
 	  </a>
 	</div>
 	<div class="small-4 cell mysite-header-white">
 	</div>
       </div>
 
-      <div class="dessus">
+      <div class="show-for-medium dessus">
 	<div class="grid-x grid-margin-x">
-	  <nav>
+	  <nav style="padding-left: 1rem; padding-right: 1rem;">
 	    {% show_menu_below_id "id_home" 0 0 100 100 "menu-f6_4.html" %}
 	  </nav>
 	</div>
@@ -294,8 +193,22 @@ div.dropdown.open > .btn {
 
       <div class="dessus">
 	<div class="grid-x grid-margin-x">
-	  <div class="small-7 medium-10 cell" style="padding-left: 0px;">
+	  <div class="small-8 medium-10 cell" style="padding-left: 0px;">
 	    {% show_menuzen 0 "menuzen-f6_4.html" %}
+	  </div>
+	  <div class="small-4 medium-2 cell">
+	    <ul class="menu align-right">
+	      <li>
+		<a class="bread-20 button" href="#" style="padding-left: 0px; padding-right: 0px; border: solid 1px rgb(255, 0, 0);">
+		  <span style="display: inline-block; width: 2em; text-align: center;">fr</span>
+		</a>
+	      </li>
+	      <li>
+		<a class="bread-100" href="#" style="padding-left: 0px; padding-right: 0px;">
+		  <span style="display: inline-block; width: 2em; text-align: center;">en</span>
+		</a>
+	      </li>
+	    </ul>
 	  </div>
 	</div>
       </div>
@@ -311,7 +224,7 @@ div.dropdown.open > .btn {
   </div>
 </div>
 
-
+<!--script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js" crossorigin="anonymous"></script--><!-- integrity="sha256-Nd2xznOkrE9HkrAMi4xWy/hXkQraXioBg9iYsBrcFrs=" -->
 <script src="{% static 'assets/js/app.js' %}"></script>
 
 </body>
