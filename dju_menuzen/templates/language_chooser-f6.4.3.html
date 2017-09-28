@@ -1,0 +1,12 @@
+{% load i18n menu_tags %}
+
+{% if languages|length > 1 %}
+{% for language in languages %}
+<ul class="menu align-right">
+  <li  class="lang{% if current_language == language.0 %} active{% endif %}">
+    <a href="{% page_language_url language.0 %}" title="{% trans "Change to language:" %} {{ language.1 }}" style="padding-left: 0px; padding-right: 0px;">
+      <span style="display: inline-block; width: 2em; text-align: center;">{{ language.1 }}</span>
+    </a>
+  </li>
+{% endfor %}
+{% endif %}
