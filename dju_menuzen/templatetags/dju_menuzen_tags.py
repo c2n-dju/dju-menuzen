@@ -6,7 +6,6 @@ import datetime
 from classytags.arguments import IntegerArgument, Argument, StringArgument
 from classytags.core import Options
 from classytags.helpers import InclusionTag
-from cms.utils.page_resolver import get_page_queryset
 from django import template
 from django.conf import settings
 from django.core.urlresolvers import reverse, NoReverseMatch
