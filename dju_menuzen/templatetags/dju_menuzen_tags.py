@@ -52,7 +52,10 @@ class ShowMenuZen(InclusionTag):
         except:
             only_visible = bool(only_visible)
         branch = []
-        nodes = menu_pool.get_nodes(request, breadcrumb=False) # fait appel à deepcopy, False pour appeler AuthVisibility.modify
+        menu_renderer = context.get('cms_menu_renderer')
+        if not menu_renderer:
+            menu_renderer = menu_pool.get_renderer(request)
+        nodes = menu_renderer.get_nodes(request, breadcrumb=False) # fait appel à deepcopy, False pour appeler AuthVisibility.modify
         selected = None
         home = None
         homeurl = unquote(reverse("pages-root"))
