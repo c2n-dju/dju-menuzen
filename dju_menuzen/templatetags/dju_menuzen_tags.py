@@ -8,7 +8,7 @@ from classytags.core import Options
 from classytags.helpers import InclusionTag
 from django import template
 from django.conf import settings
-from django.core.urlresolvers import reverse, NoReverseMatch
+from django.urls import reverse, NoReverseMatch
 from django.template.base import Node
 from django.template.defaultfilters import date
 from django.utils import timezone
