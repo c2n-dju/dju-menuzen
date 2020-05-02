@@ -12,7 +12,6 @@ from django.urls import reverse, NoReverseMatch
 from django.template.base import Node
 from django.template.defaultfilters import date
 from django.utils import timezone
-from django.utils.six.moves.urllib.parse import unquote
 from django.utils.translation import get_language
 from menus.menu_pool import menu_pool
 from menus.utils import DefaultLanguageChanger
